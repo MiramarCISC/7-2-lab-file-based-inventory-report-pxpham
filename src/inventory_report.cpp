@@ -61,7 +61,7 @@ bool writeInventoryReport(string filename, const InventoryItem items[], int coun
     double totalValue = 0;
     for (int i = 0; i < count; i++){
         double value = calculateItemValue(items[i]);
-        outputFile << items[i].name << " " << value << endl;
+        outputFile << items[i].sku << " " << items[i].name << " " << value << endl;
         totalValue += value;
     }
     outputFile << "Total inventory value: " << totalValue << endl;
